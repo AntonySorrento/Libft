@@ -6,7 +6,7 @@
 /*   By: asorrent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 07:04:45 by asorrent          #+#    #+#             */
-/*   Updated: 2021/01/27 07:08:27 by asorrent         ###   ########.fr       */
+/*   Updated: 2021/04/02 07:33:27 by asorrent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 	int		mem;
 
 	mem = count * size;
-	if ((ptr = malloc(mem)) == NULL)
+	ptr = malloc(mem);
+	if (ptr == NULL)
 		return (NULL);
 	ft_bzero(ptr, mem);
 	return (ptr);

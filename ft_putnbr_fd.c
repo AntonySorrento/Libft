@@ -6,7 +6,7 @@
 /*   By: asorrent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 16:22:50 by asorrent          #+#    #+#             */
-/*   Updated: 2021/02/06 07:34:41 by asorrent         ###   ########.fr       */
+/*   Updated: 2021/04/02 07:59:12 by asorrent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void	ft_putnbr_pos(int nb, int fd)
 	}
 }
 
-void		ft_putnbr_fd(int nb, int fd)
+void	ft_putnbr_fd(int nb, int fd)
 {
 	if (nb == 0)
 		write(fd, "0", 1);

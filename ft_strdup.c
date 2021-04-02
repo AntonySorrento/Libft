@@ -6,7 +6,7 @@
 /*   By: asorrent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 07:09:08 by asorrent          #+#    #+#             */
-/*   Updated: 2021/01/27 07:56:59 by asorrent         ###   ########.fr       */
+/*   Updated: 2021/04/02 08:47:45 by asorrent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char	*ft_strdup(const char *s1)
 	size_t		i;
 
 	len = ft_strlen(s1);
-	if ((s2 = malloc(len + 1)) == NULL)
+	s2 = malloc(len + 1);
+	if (s2 == NULL)
 		return (NULL);
 	i = 0;
 	while (i < len)

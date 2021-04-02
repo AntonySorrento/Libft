@@ -6,13 +6,11 @@
 /*   By: asorrent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 06:38:31 by asorrent          #+#    #+#             */
-/*   Updated: 2021/01/22 10:38:13 by asorrent         ###   ########.fr       */
+/*   Updated: 2021/04/02 09:18:58 by asorrent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)
 {

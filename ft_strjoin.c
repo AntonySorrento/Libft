@@ -6,7 +6,7 @@
 /*   By: asorrent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 06:34:32 by asorrent          #+#    #+#             */
-/*   Updated: 2021/01/29 07:04:56 by asorrent         ###   ########.fr       */
+/*   Updated: 2021/04/02 08:48:52 by asorrent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
-	if ((str = malloc(len + 1)) == NULL)
+	str = malloc(len + 1);
+	if (str == NULL)
 		return (NULL);
 	i = 0;
 	j = 0;

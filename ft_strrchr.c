@@ -6,7 +6,7 @@
 /*   By: asorrent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 17:22:34 by asorrent          #+#    #+#             */
-/*   Updated: 2021/01/22 17:36:47 by asorrent         ###   ########.fr       */
+/*   Updated: 2021/04/02 09:21:31 by asorrent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	char	a;
 	int		i;
 
-	str = (char*)s;
+	str = (char *)s;
 	a = (char)c;
 	i = 0;
 	while (str[i])
@@ -27,6 +27,7 @@ char	*ft_strrchr(const char *s, int c)
 	if (a == 0)
 		return (&str[i]);
 	else
+	{
 		while (i >= 0)
 		{
 			if (str[i] == a)
@@ -34,5 +35,6 @@ char	*ft_strrchr(const char *s, int c)
 			else
 				i--;
 		}
+	}
 	return (NULL);
 }

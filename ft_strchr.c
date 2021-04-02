@@ -6,7 +6,7 @@
 /*   By: asorrent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 16:33:40 by asorrent          #+#    #+#             */
-/*   Updated: 2021/01/22 17:25:53 by asorrent         ###   ########.fr       */
+/*   Updated: 2021/04/02 08:32:43 by asorrent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strchr(const char *s, int c)
 	char	*str;
 	char	a;
 
-	str = (char*)s;
+	str = (char *)s;
 	a = (char)c;
 	if (a == 0)
 	{
@@ -27,6 +27,7 @@ char	*ft_strchr(const char *s, int c)
 		return (str);
 	}
 	else
+	{
 		while (*str)
 		{
 			if (*str == a)
@@ -34,5 +35,6 @@ char	*ft_strchr(const char *s, int c)
 			else
 				str++;
 		}
+	}
 	return (NULL);
 }

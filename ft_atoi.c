@@ -6,13 +6,13 @@
 /*   By: asorrent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 08:13:05 by asorrent          #+#    #+#             */
-/*   Updated: 2021/01/23 15:10:20 by asorrent         ###   ########.fr       */
+/*   Updated: 2021/04/02 07:29:07 by asorrent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	unsigned long	nb;
 	long			s;

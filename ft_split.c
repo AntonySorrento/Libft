@@ -6,13 +6,13 @@
 /*   By: asorrent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 10:55:25 by asorrent          #+#    #+#             */
-/*   Updated: 2021/02/06 07:39:57 by asorrent         ###   ########.fr       */
+/*   Updated: 2021/04/02 08:32:07 by asorrent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		count_w(char const *s, char c)
+static int	count_w(char const *s, char c)
 {
 	int		i;
 	int		nb_w;
@@ -34,7 +34,7 @@ static int		count_w(char const *s, char c)
 	return (nb_w);
 }
 
-static int		trim(char const *s, char c, int i)
+static int	trim(char const *s, char c, int i)
 {
 	if (c == 0)
 		return (i);
@@ -43,7 +43,7 @@ static int		trim(char const *s, char c, int i)
 	return (i);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		j;
@@ -52,7 +52,8 @@ char			**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	if ((lines = malloc(sizeof(char *) * count_w(s, c) + 1)) == NULL)
+	lines = malloc(sizeof(char *) * count_w(s, c) + 1);
+	if (lines == NULL)
 		return (NULL);
 	i = 0;
 	x = -1;
@@ -62,8 +63,7 @@ char			**ft_split(char const *s, char c)
 		j = 0;
 		while (s[i + j] && s[i + j] != c)
 			j++;
-		if ((lines[++x] = ft_substr(s, i, j)) == NULL)
-			return (NULL);
+		lines[++x] = ft_substr(s, i, j);
 		i = i + j;
 		i = trim(s, c, i);
 	}
