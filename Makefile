@@ -6,7 +6,7 @@
 #    By: asorrent <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/23 12:06:37 by asorrent          #+#    #+#              #
-#    Updated: 2021/03/19 14:46:32 by asorrent         ###   ########.fr        #
+#    Updated: 2021/06/18 08:39:05 by asorrent         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,13 @@ SRC = ft_isalpha.c ft_isprint.c ft_memmove.c ft_strlen.c  \
 
 OBJ = $(SRC:.c=.o)
 
+BONUS = ft_lstnew.c ft_lstadd_front.c \
+	  ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+	  ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+	  ft_lstmap.c ft_lstmap.c \
+
+BONUS_OBJS = $(BONUS:.c=.o)
+
 .c.o:
 		gcc $(CFLAGS) -c $< -o $(<:.c=.o)
 
@@ -42,4 +49,8 @@ fclean: 	clean
 
 re: 		fclean all
 
-.PHONY : all fclean clean re
+bonus:		$(OBJ) $(BONUS_OBJS) 
+			ar rc $(NAME) $(OBJ) $(BONUS_OBJS)
+
+
+.PHONY : all fclean clean re bonus
