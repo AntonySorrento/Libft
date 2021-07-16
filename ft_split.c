@@ -6,7 +6,7 @@
 /*   By: asorrent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 10:55:25 by asorrent          #+#    #+#             */
-/*   Updated: 2021/04/02 08:32:07 by asorrent         ###   ########.fr       */
+/*   Updated: 2021/07/16 15:23:46 by asorrent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	lines = malloc(sizeof(char *) * count_w(s, c) + 1);
+	lines = malloc(sizeof(char *) * (count_w(s, c) + 1));
 	if (lines == NULL)
 		return (NULL);
 	i = 0;
